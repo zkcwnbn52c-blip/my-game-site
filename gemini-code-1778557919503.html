@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>心动小镇省心助手 - 你的慢生活指南</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Noto Sans SC', sans-serif; background-color: #FDF6EC; }
+        .cozy-card { background: white; border-radius: 24px; box-shadow: 0 10px 25px -5px rgba(214, 187, 160, 0.3); }
+        .btn-cozy { background-color: #E6A23C; color: white; border-radius: 12px; transition: all 0.3s; }
+        .btn-cozy:hover { background-color: #D68F29; transform: translateY(-2px); }
+    </style>
+</head>
+<body class="text-stone-700">
+
+    <nav class="p-6 flex justify-between items-center max-w-6xl mx-auto">
+        <div class="text-2xl font-bold text-orange-800 tracking-tight">🏡 小镇生活家</div>
+        <div class="space-x-6 hidden md:block text-stone-500 text-sm">
+            <a href="#" class="hover:text-orange-600 transition">今日鱼类</a>
+            <a href="#" class="hover:text-orange-600 transition">资源地图</a>
+            <a href="#" class="hover:text-orange-600 transition">园艺配方</a>
+            <a href="#" class="hover:text-orange-600 transition">发展家等级</a>
+        </div>
+        <button class="px-5 py-2 btn-cozy shadow-md text-sm">保存到桌面</button>
+    </nav>
+
+    <main class="max-w-6xl mx-auto px-6 py-8">
+        
+        <section class="mb-12 text-center py-10">
+            <h1 class="text-4xl md:text-5xl font-bold text-stone-800 mb-4">今天在心动小镇也要开心呀！☀️</h1>
+            <p class="text-stone-500 text-lg">实时更新兑换码、每日鱼王预告、全资源采集指南。</p>
+        </section>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <div class="md:col-span-1">
+                <div class="cozy-card p-6 h-full border-t-4 border-orange-400">
+                    <h3 class="text-xl font-bold mb-4 flex items-center text-orange-700">
+                        <span class="mr-2">🎁</span> 最新礼包码
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="p-4 bg-orange-50 rounded-2xl border border-orange-100 flex justify-between items-center">
+                            <div>
+                                <p class="font-mono font-bold text-orange-800 text-lg">XDXD666</p>
+                                <p class="text-xs text-stone-400 mt-1">奖励: 满愿星*50 + 金币</p>
+                            </div>
+                            <button onclick="copyToClipboard('XDXD666', this)" class="px-4 py-2 bg-white rounded-xl border border-orange-200 text-orange-600 font-bold text-sm hover:bg-orange-600 hover:text-white transition-all shadow-sm">
+                                复制
+                            </button>
+                        </div>
+                        <div class="p-4 bg-orange-50 rounded-2xl border border-orange-100 flex justify-between items-center">
+                            <div>
+                                <p class="font-mono font-bold text-orange-800 text-lg">HEARTTOOWN</p>
+                                <p class="text-xs text-stone-400 mt-1">奖励: 专属家具装饰</p>
+                            </div>
+                            <button onclick="copyToClipboard('HEARTTOOWN', this)" class="px-4 py-2 bg-white rounded-xl border border-orange-200 text-orange-600 font-bold text-sm hover:bg-orange-600 hover:text-white transition-all shadow-sm">
+                                复制
+                            </button>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-center text-xs text-stone-400">若无法使用，请检查大小写是否输入正确</p>
+                </div>
+            </div>
+
+            <div class="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div class="cozy-card p-6 hover:shadow-xl transition group cursor-pointer overflow-hidden relative border-b-4 border-blue-200">
+                    <div class="relative z-10">
+                        <span class="text-blue-500 font-bold text-xs uppercase tracking-widest">Fishing Guide</span>
+                        <h3 class="text-2xl font-bold mb-2">🎣 今日鱼王预告</h3>
+                        <p class="text-stone-400 text-sm">【彩虹瀑布】18:00-24:00 刷新<br>目标：大西洋鲑 (雨天概率提升)</p>
+                    </div>
+                    <div class="absolute -right-4 -bottom-4 opacity-10 group-hover:scale-110 group-hover:rotate-12 transition duration-500">
+                        <span class="text-8xl">🐟</span>
+                    </div>
+                </div>
+
+                <div class="cozy-card p-6 hover:shadow-xl transition group cursor-pointer overflow-hidden relative border-b-4 border-green-200">
+                    <div class="relative z-10">
+                        <span class="text-green-500 font-bold text-xs uppercase tracking-widest">Resource Map</span>
+                        <h3 class="text-2xl font-bold mb-2">🗺️ 资源采集地图</h3>
+                        <p class="text-stone-400 text-sm">全地图【萤火虫】、【猫眼石】<br>刷新位置精准标注，支持打卡</p>
+                    </div>
+                    <div class="absolute -right-4 -bottom-4 opacity-10 group-hover:scale-110 group-hover:rotate-12 transition duration-500">
+                        <span class="text-8xl">📍</span>
+                    </div>
+                </div>
+
+                <div class="cozy-card p-6 hover:shadow-xl transition group cursor-pointer overflow-hidden relative border-b-4 border-purple-200">
+                    <div class="relative z-10">
+                        <span class="text-purple-500 font-bold text-xs uppercase tracking-widest">Garden Design</span>
+                        <h3 class="text-2xl font-bold mb-2">🌸 园艺配方大全</h3>
+                        <p class="text-stone-400 text-sm">如何通过交叉种植获得【蓝色绣球】？<br>最新的杂交成功率表</p>
+                    </div>
+                    <div class="absolute -right-4 -bottom-4 opacity-10 group-hover:scale-110 group-hover:rotate-12 transition duration-500">
+                        <span class="text-8xl">🌷</span>
+                    </div>
+                </div>
+
+                <div class="cozy-card p-6 hover:shadow-xl transition group cursor-pointer overflow-hidden relative border-b-4 border-red-200">
+                    <div class="relative z-10">
+                        <span class="text-red-500 font-bold text-xs uppercase tracking-widest">Daily Task</span>
+                        <h3 class="text-2xl font-bold mb-2">📝 每日必做 checklist</h3>
+                        <p class="text-stone-400 text-sm">1. 拾取海滩漂流瓶<br>2. 找波派领取体力餐</p>
+                    </div>
+                    <div class="absolute -right-4 -bottom-4 opacity-10 group-hover:scale-110 group-hover:rotate-12 transition duration-500">
+                        <span class="text-8xl">📅</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <footer class="mt-20 border-t border-stone-200 pt-8 pb-12 text-center text-stone-400 text-sm">
+            <p>© 2026 心动小镇省心助手 - 只有玩家才懂玩家</p>
+            <p class="mt-2 text-xs">内容根据玩家社群整理 | 请支持正版游戏</p>
+        </footer>
+    </main>
+
+    <script>
+        function copyToClipboard(text, btn) {
+            navigator.clipboard.writeText(text).then(() => {
+                // Toast 提示
+                const toast = document.createElement('div');
+                toast.innerText = '✨ 复制成功，快去小镇领奖吧！';
+                toast.className = 'fixed bottom-10 left-1/2 -translate-x-1/2 bg-stone-800 text-white px-8 py-3 rounded-full shadow-2xl transition-all duration-500 opacity-0 z-50 pointer-events-none text-sm';
+                document.body.appendChild(toast);
+
+                setTimeout(() => {
+                    toast.style.opacity = '1';
+                    toast.style.transform = 'translate(-50%, -20px)';
+                }, 100);
+
+                // 按钮状态切换
+                const originalText = btn.innerText;
+                btn.innerText = '已复制!';
+                btn.classList.add('bg-green-500', 'text-white', 'border-green-500');
+
+                setTimeout(() => {
+                    toast.style.opacity = '0';
+                    setTimeout(() => toast.remove(), 500);
+                    btn.innerText = originalText;
+                    btn.classList.remove('bg-green-500', 'text-white', 'border-green-500');
+                }, 2000);
+            }).catch(err => {
+                alert('复制失败，请重试');
+            });
+        }
+    </script>
+</body>
+</html>
